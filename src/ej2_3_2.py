@@ -5,16 +5,14 @@ def pedirNumero(msj: str) -> int:
     num = None
     try:
         num = int(input(msj))
-        
+        if num <= 0:
+            raise Exception("Numero negativo o cero. ")
     except ValueError:
-        print("**Error** Número introducido no válido")   
-    except:
-        print("**Error** Número introducido no válido")   
-    try:
-        num <= 0
-    except:
         print("**Error** Número introducido no válido")
+    except Exception:
+        print("**Error** Número introducido no positivo o cero.")
     return num
+
 
 def serieNum(num):
     serie = ""
@@ -27,9 +25,10 @@ def serieNum(num):
 
 def main():
     num = pedirNumero("Introduzca un número: ")
+    
     if num != None:
         res = serieNum(num)
-        if res:
+        if res != "":
             print(res)
         else:
             print("No hay números impares en el rango.")

@@ -2,6 +2,16 @@
 Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 """
 
+def pedirEdad(msj: str):
+    entrada = input(msj)
+    edad = int(entrada)
+    
+    if edad <= 0:
+        raise Exception("Introduzca una edad válida. ")
+    
+    return edad
+
+
 def mostrarSerie(edad: int):
     serie = ""
     for i in range(1, edad ):
@@ -9,17 +19,6 @@ def mostrarSerie(edad: int):
     serie += str(edad)
 
     return serie
-
-
-def pedirEdad(msj: str):
-    entrada = input(msj)
-    
-    edad = int(entrada)
-    
-    if edad <= 0:
-        raise Exception("Introduzca una edad válida. ")
-    
-    return edad
 
 
 def main():
