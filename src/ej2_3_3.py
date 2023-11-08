@@ -15,9 +15,9 @@ def serieNum(num):
     serie = ""
     cont = num
     while cont >= 0:
-        serie += str(cont) + " , "
+        serie += str(cont) + ", "
         cont -= 1
-    return serie[:-3]
+    return serie[:-2]
 
 
 def main():
