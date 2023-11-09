@@ -5,7 +5,7 @@ El algoritmo burbuja
 El algoritmo burbuja te permite ordenar valores de un array. Funciona revisando cada elemento con el elemanto adyacente. Si ambos elementos no están ordenados, se procede a intercambiarlos, si por el contrario los elementos ya estaban ordenados se dejan tal como estaban. Este proceso sigue para cada elemento del arreglo hasta que quede completamente ordenado.
 
 """
-def pedirNum():
+def pedir_num():
 
     numeros_str = input("Ingresa una serie de números separados por espacio: ")
     numeros = [int(num) for num in numeros_str.split()]
@@ -16,7 +16,7 @@ def guardar_en_lista(numeros):
     listaNum = numeros
     return listaNum
 
-def ordenarSerie(listaNum):
+def ordenar_serie(listaNum):
     
     n = len(listaNum)
     for i in range(n):
@@ -29,9 +29,9 @@ def ordenarSerie(listaNum):
     return listaOrdenada
 
 def main():
-    numeros = pedirNum()
+    numeros = pedir_num()
     listaNum = guardar_en_lista(numeros)
-    listaOrdenada = ordenarSerie(listaNum)
+    listaOrdenada = ordenar_serie(listaNum)
     print("Lista ordenada:")
     print(listaOrdenada)
 
