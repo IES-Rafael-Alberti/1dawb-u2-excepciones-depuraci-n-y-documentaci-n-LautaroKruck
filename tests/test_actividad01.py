@@ -1,3 +1,4 @@
+from typing import Literal
 import pytest
 from src.actividad01 import dividir
 
@@ -12,7 +13,7 @@ from src.actividad01 import dividir
         (-88.35, 12.88, -6.86)
     ]
 )
-def test_dividir_params(input_dividendo, input_divisor, expected):
+def test_dividir_params(input_dividendo: float | Literal[100, 5, 3], input_divisor: float | Literal[4, 5, 2], expected: float | Literal[25, 1]):
     assert dividir(input_dividendo, input_divisor) == expected
 
 
